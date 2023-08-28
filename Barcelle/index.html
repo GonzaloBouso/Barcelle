@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Enlaces a hojas de estilos -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- Hoja de estilos para resetear estilos predeterminados del navegador -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Hoja de estilos de Bootstrap para una base de diseño -->
+    <link rel="stylesheet" id="theme-style" href="estilos-claro.css">
+  
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconexión a Google Fonts para mejorar la velocidad de carga -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Fuente de Google Fonts (Poppins) para estilos tipográficos -->
+    
+    <link href="https://fonts.cdnfonts.com/css/amsterdam-2" rel="stylesheet">
+    <!-- Fuente adicional desde una fuente externa -->
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Hoja de estilos personalizada (styles.css) para estilos específicos -->
+    
+    <title>Barcelle</title>
+    <!-- Título de la pestaña del navegador -->
+</head>
+
+
+
+
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+          <button id="modoBoton">Cambiar Modo</button>
+            <!-- Adentro de un div colocamos una etiqueta "a" que nos redireccione al index y a continuacion una etiqueta "img" con el logo, 
+              de modo a que cada vez que se presione sobre el logo, este nos direccione al inicio -->
+            <div class="navbar-logo">
+                <a href="index.html"><img src="./img/2-logo-negro.png" alt="Barcelle Logo"></a>
+            </div>
+            <!-- Menú de navegación.
+            El nav sera formado por una lista no ordenanada gracias a las etiquetas
+             "ul"y "il".
+            Como aun no tenemos las paginas a las que nos tendria que redirigir el nav,
+             simplemente lo colocamos asi a modo de prueba -->
+            <ul class="navbar-menu">
+                <li ><a href="#compra">¿Cómo comprar?</a></li>
+                <li><a href="#pide-aqui">Pide aquí</a></li>
+                <li><a href="#zona-reparto">Zona de reparto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Contenido principal
+    a el contenido principal lo ponemos dentro de la etiqueta "main" -->
+    <main>
+        <!-- Sección de descripción general -->
+        <section class="descripcion-general">
+            <div class="descripcion-content">
+                <!-- Imagen de la sección -->
+                <!--Como en este caso que tenemos un "div=class... a las clases las usaremos para luego
+                   poder darle nuestros propios estilos a la pagina con css"-->
+                <div class="descripcion-imagen">
+                    <img src="./img/imagenDescrip.jpg" alt="Pastelería y Panadería Barcelle">
+                </div>
+                <!-- Texto de la sección
+                Aqui colocamos un h1 ya que este serà el titulo principal de nuestra pagina,
+              luego colocamos 2 "p" para agregar texto -->
+                <div class="descripcion-texto">
+                    <h1>Bienvenido a Barcelle</h1>
+                    <p>Somos tu destino para deliciosos sabores y auténticos placeres dulces...</p>
+                    <p>Desde suaves croissants hasta pasteles decadentes, cada bocado en Barcelle es una obra maestra hecha con ingredientes frescos y de alta calidad...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de productos -->
+        <section class="nuestros-productos">
+          <!-- Continuando con la jerarquia de nuestros titulos, colocamos un h2 -->
+            <h2 class="np" id="compra">Nuestros Productos</h2>
+            <!-- Contenedor de productos -->
+            <div class="productos-contenedor">
+              <!-- a continuacion usaremos el "div=class=producto" para separar cada producto
+                 en una especie de tarjetas o cajas -->
+                <!-- Producto 1 -->
+                <div class="producto interactive-product">
+                    <img src="./img/Torta1.jpg" alt="Pastel de Chocolate">
+                    <h3>Pastel de Chocolate</h3>
+                    <p>Delicioso pastel de chocolate. Precio: $12.99</p>
+                    <!--Aqui agregamos una etiqueta "button" que serà un boton para que los clientes
+                       puedan efectuar sus compras, aunque por el momento no tiene funcionalidad-->
+                    <button>Comprar</button>
+                </div>
+                <!--El codigo se repetira durante "producto2" y "producto3" -->
+                <!-- Producto 2 -->
+                <div class="producto interactive-product">
+                    <img src="./img/TortaOreo.jpg" alt="Torta de Oreo">
+                    <h3>Torta de Oreo</h3>
+                    <p>Torta de oreo congelada. Precio: $4.99</p>
+                    <button>Comprar</button>
+                </div>
+                <!-- Producto 3 -->
+                <div class="producto interactive-product">
+                    <img src="./img/TortaRosa.jpg" alt="Torta Rosa">
+                    <h3>Torta Rosa</h3>
+                    <p>Torta de frutilla. Precio: $3.49</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </section>
+        <!--Toda esta seccion fue hecha con Bootstrap -->
+        <!-- Sección de perfiles de profesionales -->
+        <section class="nuestros-profesionales interactive-element">
+            <!-- Título de la sección -->
+            <!--"tex-center" y "custom-tittle" fueron agregados por mi,
+              debido a que el texto no estaba centrado. Hay que tener claro
+            que muchas veces necesitaremos modificar el codigo que nos brinda bootstrap-->
+            <h3 class="text-center custom-title">Nuestros Profesionales</h3>
+            <!-- Contenedor del carrusel de Bootstrap -->
+            <div id="profesionales-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores del carrusel -->
+                <ol class="carousel-indicators">
+                    <li data-target="#profesionales-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#profesionales-carousel" data-slide-to="1"></li>
+                    <li data-target="#profesionales-carousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Contenido del carrusel -->
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <!-- Botones de navegación del carrusel -->
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <!-- Contenido de las diapositivas del carrusel -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/Pastelero1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Dario</h5>
+                          <p>Dario es nuestro experto en tartas.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Pastelero2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Patricio</h5>
+                          <p>Patricio es el encargado de la decoración de nuestros productos.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Pastelero3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Roberto</h5>
+                          <p>Roberto nos aporta toda su experiencia a la hora de preparar tortas.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Botones de control del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de contacto -->
+        <!-- Lo que hare es "dividir" por asi decirlo a "contacto-section" utilizando
+        2 div que seran llamados "contacto-info" y "contacto-form" -->
+        <section class="contacto-section">
+            <div class="contacto-card">
+                <!-- Información de contacto -->
+                <div class="contacto-info" style="background-color: #ff914d;">
+                  <div class="interactive-element">
+                      <h4>Información de Contacto</h4>
+                      <p class="small">info.contact@gmail.com</p>
+                      <p class="small">+1(587)567-6745</p>
+                  </div>
+                </div>
+                <!-- Formulario de contacto -->
+                <div class="contacto-form">
+                    <h4>Envía un Mensaje</h4>
+                <!-- Se abre una etiqueta "form" para crear el formulario de contacto -->
+                    <form>
+                      <!-- La etiqueta <label> se utiliza para asociar un texto descriptivo a un elemento de entrada en el formulario,
+                         como un campo de texto, una casilla de verificación o un botón de opción.
+                        En este caso, la etiqueta <label> se utiliza para describir un campo de entrada con el id "nombre".
+
+                          El elemento <input> se utiliza para crear campos de entrada en un formulario, como campos de text  -->
+                          <div class="tex-form">
+                            <label for="nombre">Nombres:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            
+                            <label for="telefono">Teléfono/Celular:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                            
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                            <!-- El elemento <textarea> se utiliza para crear un área de texto
+                              de múltiples líneas dentro de un formulario. -->
+                            <label for="message">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                        </div>
+                        <p class="tex-form">Caracteres ingresados: <span id="char-count">0</span></p>
+                        
+                        <button class="submit" type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer de la página -->
+    <footer class="footer">
+      <div id="reactions">
+        <h5>¿Que te parecio nuestro sitio web?</h5>
+        <a href="#" class="reaction" data-reaction="👍">👍</a>
+        <a href="#" class="reaction" data-reaction="❤️">❤️</a>
+        <a href="#" class="reaction" data-reaction="😄">😄</a>
+    </div>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo en el footer -->
+                <div class="footer-logo">
+                    <img src="./img/2-logo-blanco.png" alt="Logo de Barcella">
+                </div>
+                <!-- Enlaces de navegación en el footer -->
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">¿Cómo comprar?</a></li>
+                        <li><a href="#">Pide aquí</a></li>
+                        <li><a href="#">Zona de reparto</a></li>
+                    </ul>
+                </div>
+                <!-- Información de contacto en el footer -->
+                <div class="footer-contact">
+                    <p>Contacto: info@tudominio.com</p>
+                    <p>Teléfono: +1(123)456-7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts de JavaScript (Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="code.js"></script>
+</body>
+</html>
